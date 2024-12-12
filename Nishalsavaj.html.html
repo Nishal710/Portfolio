@@ -1,0 +1,215 @@
+<!DOCTYPE html> x   
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NishalSavaj'sPortfolio</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f0f0;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #000000;
+            color: white;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        header p {
+            font-size: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        nav {
+            margin-top: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav ul li a:hover {
+            color: #f9a826;
+        }
+
+        .section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        #about {
+            background: #ff0000;
+            color: white;
+            padding: 60px 20px;
+        }
+
+        #skills, #projects, #contact {
+            background: rgb(0, 0, 0);
+        }
+
+        .skills-list, .projects-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px 0;
+        }
+
+        .skills-list li, .project-card {
+            background: #ff0000;
+            color: white;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px;
+            width: 200px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .skills-list li:hover, .project-card:hover {
+            transform: scale(1.1);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        form input, form textarea {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ffffff;
+            border-radius: 5px;
+        }
+
+        form button {
+            padding: 10px;
+            background-color: #000000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #000000;
+        }
+
+        footer {
+            background: #000000;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Nishal Savaj</h1>
+        <p>BSC-CS-IT Student | Web Developer | Tech Enthusiast</p>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>Hi! I'm Nishal Savaj, a passionate BSC-CS-IT student. I love building web applications and learning new technologies. I'm constantly improving my skills and working on exciting projects.</p>
+    </section>
+
+    <section id="skills" class="section">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>React.js</li>
+            <li>Node.js</li>
+        </ul>
+    </section>
+
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+        <div class="projects-list">
+            <div class="project-card">
+                <h3>Portfolio Website</h3>
+                <p>Designed and developed a personal portfolio website using HTML, CSS, and JavaScript.</p>
+            </div>
+            <div class="project-card">
+                <h3>ToDo List App</h3>
+                <p>A task management web app using JavaScript for real-time updates and task tracking.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Nishal Savaj. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", function(e) {
+            e.preventDefault();
+            alert("Thank you! Your message has been sent.");
+        });
+    </script>
+
+</body>
+</html>
